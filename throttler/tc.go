@@ -221,7 +221,7 @@ func (t *tcThrottler) teardown(cfg *Config) error {
 }
 
 func delIptablesRules(cfg *Config, c commander) error {
-	iptablesCommands := []string{ip4Tables, ip6Tables}
+	iptablesCommands := []string{ip4Tables}
 
 	for _, iptablesCommand := range iptablesCommands {
 		if !c.commandExists(iptablesCommand) {
