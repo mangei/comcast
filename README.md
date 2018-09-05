@@ -7,7 +7,7 @@ It works by wrapping up some system tools in a portable(ish) way. On BSD-derived
 ## Installation
 
 ```
-$ go get github.com/tylertreat/comcast
+$ go get github.com/mangei/comcast
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ $ comcast --device=eth0 --latency=250 --target-bw=1000 --default-bw=1000000 --pa
 
 On OSX, Comcast will check for `pfctl` support (as of Yosemite), which supports the same options as above. If `pfctl` is not available, it will use `ipfw` instead, which supports device, latency, target bandwidth, and packet-loss options.
 
-On BSD (with `ipfw`), Comcast currently supports only: device, latency, target bandwidth, and packet loss. 
+On BSD (with `ipfw`), Comcast currently supports only: device, latency, target bandwidth, and packet loss.
 
 ```
 $ comcast --device=eth0 --latency=250 --target-bw=1000 --packet-loss=10%
